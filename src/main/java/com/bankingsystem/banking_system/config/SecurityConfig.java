@@ -42,7 +42,7 @@ public class SecurityConfig {
                         .requestMatchers("/accounts/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/transactions/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/transfers/my-transfers").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers("/transfers/**").hasRole("USER")
+                        .requestMatchers("/transfers/**").hasAnyRole("USER", "ADMIN")
 
                         .anyRequest().authenticated()
                 )

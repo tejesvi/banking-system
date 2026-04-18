@@ -28,4 +28,6 @@ public class AccountRequest {
 
     // Optional initial deposit
     private BigDecimal initialBalance;
+
+    private BigDecimal totalTransactionValue;
 }

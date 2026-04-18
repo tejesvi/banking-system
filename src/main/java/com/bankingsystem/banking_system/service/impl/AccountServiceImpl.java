@@ -35,6 +35,9 @@ public class AccountServiceImpl implements AccountService {
         account.setBalance(
                 account.getBalance() == null ? BigDecimal.ZERO : account.getBalance()
         );
+        account.setTotalTransactionValue(
+                account.getTotalTransactionValue() == null ? BigDecimal.ZERO : account.getTotalTransactionValue()
+        );
         
         // Create or find user
         String username = account.getEmailId(); // Use email as username
